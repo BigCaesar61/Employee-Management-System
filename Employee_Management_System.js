@@ -21,7 +21,7 @@ class Employee {
 class department {
     constructor(name) {
         this.name = name;
-        this.employees = []
+        this.employees = [];
     }
 
     addEmployee(employee) {
@@ -32,5 +32,18 @@ class department {
         return this.employees.reduce((total,employee) => total +employee.salary, 0);
     }
 
+
+}
+
+//Task 3: Create a Manager Class that Inherits from Employee
+
+class Manager extends Employee { //extends the parent class
+    constructor(name, department, salary, bonus) {
+        super(name, 'Manager', salary, department);
+        this.bonus = bonus;
+    }
+     getDetails() { //overwrites previous get details and adds the manager details
+        console.logconsole.log(`${this.name} works as a Manager in the ${this.department} department. Their salary is: ${this.salary} and their bonus is: ${this.bonus}`);
+     }
 
 }
