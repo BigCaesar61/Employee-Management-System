@@ -15,3 +15,22 @@ class Employee {
     }
 
 }
+
+//Task 2: Create a Department Class
+
+class department {
+    constructor(name) {
+        this.name = name;
+        this.employees = []
+    }
+
+    addEmployee(employee) {
+        this.employee.push(employee);
+    }
+
+    getDepartmentSalary() {
+        return this.employees.reduce((total,employee) => total +employee.salary, 0);
+    }
+
+
+}
